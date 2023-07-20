@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1689351060804-fca36e095da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80');
+    background-size: cover;
+    overflow-y: hidden;
+}
+.wrapper{
+    height: 270px;
+    background: #fff;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    transition: height 0.2s ease;
+}
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.wrapper.active{
+    height: 560px;
+}
+header h1{
+    font-size: 21px;
+    color: #152437;
+    margin-top: 5px;
+}
+
+.wrapper .form{
+    margin: 20px 0 25px;
+}
+.form :where(input,button){
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form input{
+    border: 1px solid #999;
+    padding: 0 17px;
+    font-size: 18px;
+}
+.form input[type="text"]{
+    background: transparent;
+}
+
+.form button{
+    font-size: 18px;
+    background-color: #152437;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.wrapper .qr-code{
+    pointer-events: none;
+    opacity: 0;
+    padding : 33px 0;
+    display: flex;
+    border-radius:  5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
